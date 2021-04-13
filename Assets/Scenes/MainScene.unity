@@ -290,6 +290,8 @@ MonoBehaviour:
   - {fileID: 393376078}
   - {fileID: 222072854}
   - {fileID: 2073413225}
+  normalSpeed: 1.5
+  spottedMultiplier: 2
 --- !u!195 &167854324
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3738,6 +3740,8 @@ MonoBehaviour:
   waypoints:
   - {fileID: 1260521101}
   - {fileID: 913679325}
+  normalSpeed: 1.5
+  spottedMultiplier: 2
 --- !u!195 &576565219
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3899,6 +3903,8 @@ MonoBehaviour:
   waypoints:
   - {fileID: 777756314}
   - {fileID: 1797540731}
+  normalSpeed: 1.5
+  spottedMultiplier: 2
 --- !u!195 &700912161
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5884,6 +5890,8 @@ MonoBehaviour:
   waypoints:
   - {fileID: 1547096346}
   - {fileID: 1294042732}
+  normalSpeed: 1.5
+  spottedMultiplier: 2
 --- !u!198 &4379850182221267800
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -10672,6 +10680,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: JohnLemon
+      objectReference: {fileID: 0}
+    - target: {fileID: 6111890746963380051, guid: 1b5aedcb6e22f1148ac167c6b61756bb,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5aedcb6e22f1148ac167c6b61756bb, type: 3}
