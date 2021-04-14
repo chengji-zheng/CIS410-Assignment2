@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float turnSpeed = 20f;
-
+    float time = 0;
     Animator m_Animator;
     Rigidbody m_Rigidbody;
     AudioSource m_AudioSource;
@@ -36,12 +36,19 @@ public class PlayerMovement : MonoBehaviour
         {
             if (!m_AudioSource.isPlaying)
             {
+                time = 0;
+                m_AudioSource.volume = 1.0f;
                 m_AudioSource.Play();
             }
         }
         else
         {
-            m_AudioSource.Stop();
+            m_AudioSource.volume = Mathf.Lerp(1.0f, 0.0f, time*3);
+            time += Time.deltaTime;
+            if (m_AudioSource.volume == 0.0f)
+            {
+                m_AudioSource.Stop();
+            }
         }
 
         Vector3 desiredForward = Vector3.RotateTowards(transform.forward, m_Movement, turnSpeed * Time.deltaTime, 0f);
